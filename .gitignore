@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+**/.env
+**/__pycache__/
+**/*.pyc
+Bot/PrizeBondChatBot/venv/
+Bot/PrizeBondChatBot/.venv/
+Bot/PrizeBondChatBot/chroma_db/
+Bot/PrizeBondChatBot/.streamlit/
+*.rar

@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Urdu (Nastaʼliq-friendly) fallback stack. When the page is in Urdu we bump
+   line-height and switch to a font that renders Arabic-script glyphs well. */
+:root[lang="ur"] body,
+:root[lang="ur"] {
+  font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Segoe UI", Tahoma, sans-serif;
+}
+
+:root[lang="ur"] {
+  line-height: 1.9;
+}
+
+/* Keep numerals, prices and Latin codes readable inside RTL text. */
+.ltr-nums,
+.font-mono {
+  direction: ltr;
+  unicode-bidi: embed;
+}
