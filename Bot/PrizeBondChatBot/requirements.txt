@@ -1,12 +1,9 @@
-streamlit
-langchain
+Flask
+flask-cors
+python-dotenv
+langchain-core
 langchain-community
 langchain-groq
-langchain-chroma
 langchain-huggingface
 sentence-transformers
-pymupdf
-pandas
-openpyxl
-python-dotenv
-langchain-text-splitters
+faiss-cpu

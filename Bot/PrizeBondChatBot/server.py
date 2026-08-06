@@ -47,4 +47,4 @@ def chat():
 
 if __name__ == "__main__":
     print("Loading Prize Bond assistant… (first run downloads the embedding model)")
-    app.run(host="127.0.0.1", port=8000, debug=False)
+    app.run(host=os.getenv("HOST", "0.0.0.0"), port=int(os.getenv("PORT", "8000")), debug=False)
