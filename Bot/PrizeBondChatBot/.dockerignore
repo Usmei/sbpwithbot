@@ -1,0 +1,12 @@
+﻿.git
+.gitignore
+.env
+.env.*
+venv
+.venv
+__pycache__
+*.pyc
+.cache
+.pytest_cache
+app.py
+*.rar
