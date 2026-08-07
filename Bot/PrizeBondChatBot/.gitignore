@@ -1,4 +1,11 @@
-.env
+﻿.env
+.env.*
+venv/
+.venv/
 __pycache__/
-chroma_db/
 *.pyc
+*.rar
+.cache/
+.pytest_cache/
+chroma_db/
+.streamlit/

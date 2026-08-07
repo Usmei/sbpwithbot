@@ -24,6 +24,18 @@ app = Flask(__name__)
 CORS(app)  # dev: allow the Vite origin to call us directly
 
 
+@app.get("/")
+def index():
+    # Friendly landing page so the host URL doesn't show a 404.
+    return (
+        "<h2>ICFS Prize Bond Assistant API</h2>"
+        "<p>Status: running. This is the chatbot backend for the ICFS website.</p>"
+        "<p>Endpoints: <code>GET /api/health</code>, <code>POST /api/chat</code></p>",
+        200,
+        {"Content-Type": "text/html"},
+    )
+
+
 @app.get("/api/health")
 def health():
     return jsonify({"status": "ok"})
@@ -47,4 +59,6 @@ def chat():
 
 if __name__ == "__main__":
     print("Loading Prize Bond assistant… (first run downloads the embedding model)")
-    app.run(host="127.0.0.1", port=8000, debug=False)
+    host = os.getenv("HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", "8000"))
+    app.run(host=host, port=port, debug=False)

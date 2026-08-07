@@ -1,11 +1,41 @@
+﻿# Node / Vite
 node_modules/
 dist/
+
+# Vercel local metadata
+.vercel/
+
+# Environment variables / secrets
 .env
+.env.*
 **/.env
-**/__pycache__/
-**/*.pyc
+**/.env.*
+
+# Python virtual environments
+venv/
+.venv/
 Bot/PrizeBondChatBot/venv/
 Bot/PrizeBondChatBot/.venv/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.cache/
+
+# Old/local backend data
 Bot/PrizeBondChatBot/chroma_db/
 Bot/PrizeBondChatBot/.streamlit/
+
+# Large archives
 *.rar
+Bot/*.rar
+Bot/PrizeBondChatBot.rar
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
